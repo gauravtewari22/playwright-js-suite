@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test":"npx playwright test"
+    "test": "npx playwright test --project=chromium",
+    "test:headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +13,7 @@
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.53.1",
-    "@types/node": "^24.0.7"
+    "@types/node": "^24.0.7",
+    "http-server": "^14.1.1"
   }
 }

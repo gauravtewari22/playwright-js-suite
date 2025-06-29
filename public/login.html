@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+<body>
+  <h1>Login to Your Account</h1>
+
+  <form id="login-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" />
+
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" />
+
+    <br><br>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p id="error-message" style="color: red; display: none;">Invalid credentials</p>
+  <p id="success-message" style="color: green; display: none;">Login successful!</p>
+
+  <script>
+    const form = document.getElementById('login-form');
+    const errorMsg = document.getElementById('error-message');
+    const successMsg = document.getElementById('success-message');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const username = form.username.value;
+      const password = form.password.value;
+
+      if (username === 'admin' && password === 'password123') {
+        errorMsg.style.display = 'none';
+        successMsg.style.display = 'block';
+      } else {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
