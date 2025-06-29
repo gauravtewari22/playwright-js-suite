@@ -22,7 +22,7 @@ test('test', async ({ page }) => {
   await page.locator('[data-test="password"]').fill('');
   await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill('secret_sauce');
-  await page.locator('[data-test="login-button12"]').click();
+  await page.locator('[data-test="login-button"]').click();
   await page.getByRole('button', { name: 'Open Menu' }).click();
   await page.locator('[data-test="logout-sidebar-link"]').click();
 });
